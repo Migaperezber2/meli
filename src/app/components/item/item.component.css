@@ -1,0 +1,22 @@
+.item-container{
+    width: 100%;
+    display: block;
+    height: 190px;
+}
+
+.logo{
+    width: 180px;
+    height: 180px;
+    border-radius: 4px;
+    margin-left: 16px;
+    float: left;
+    object-fit: contain;
+}
+
+.description{
+   max-width: 450px;
+    float: left;
+    margin-top: 32px;
+    margin-left: 16px;
+    color:#333333 ;
+}

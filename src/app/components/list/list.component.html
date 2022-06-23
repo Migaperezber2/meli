@@ -1,0 +1,10 @@
+<app-barra></app-barra>
+<div class="cuerpo" >
+    <div class="lista" >
+        <div *ngFor="let item of results" >
+            <app-item  [item]="item"  ></app-item> 
+            <hr style=" background-color: #999999; " >
+        </div>
+       
+    </div>
+</div>
