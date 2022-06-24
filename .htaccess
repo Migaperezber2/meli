@@ -1,11 +1,12 @@
 
-
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase ./meli/
-RewriteRule ^/meli/index\.html$ - [L]
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /meli/index.html [L]
+RewriteCond %{REQUEST_URI} ^/meli/
+RewriteRule .* /meli/index.html [L]
 </IfModule>
+
 
