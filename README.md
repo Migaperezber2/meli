@@ -1,6 +1,7 @@
 ### Servidor de desarrollo
 Para ejecutar una version local del proyecto, ejecute  `ng serve` en la carpeta contenedora y navegue a `http://localhost:4200/`
 
+
 ## Esctructura. 
 
 Proyecto desarrollado con Angular 12. 
