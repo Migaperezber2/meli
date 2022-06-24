@@ -6,6 +6,6 @@ RewriteBase /meli/
 RewriteRule ^index\.html$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.html [L]
+RewriteRule . /meli/index.html [L]
 </IfModule>
 
