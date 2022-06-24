@@ -19,7 +19,7 @@ search(){
   var buscado=this.elRef.nativeElement.querySelector('#searchvalue').value;
 
   //location.href="/items?search="+buscado;
-  this.router.navigate(['./items'], {queryParams:{search: buscado}});
+  this.router.navigate(['/items'], {queryParams:{search: buscado}});
 }
 
 }
