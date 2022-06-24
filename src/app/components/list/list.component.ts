@@ -16,24 +16,25 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams
-    .subscribe(params => {
-      //console.log(params); // { orderby: "price" }
-      this.search = params.search;
-      //console.log(this.search); // price
+    .subscribe(params => {  
+      //observable que nos ayuda a obtener los parametros de la url, en este caso, la busqueda realizada         
+      this.search = params.search;      
       this.getItems(this.search);
     }
   );
   }
   getItems(search:String){
+    //funcion que por medio del api service envia el parametro de busqueda y obtiene los resultados
     this.elRef.nativeElement.querySelector('#searchvalue').value=search;
     this.apiService.search(search)
     .then((r:any)=>{
-    //  console.log(r)
+    
      if(r["results"]){
       this.results=r["results"];
       if(this.results.length>4){
+        //obtenemos unicamente los 4 primeros resultados
         this.results=this.results.slice(0,4)
-        //console.log(this.results);
+      
       }
      }
      

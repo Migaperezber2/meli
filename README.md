@@ -1,27 +1,18 @@
-# Meli
+### Servidor de desarrollo
+Para ejecutar una version local del proyecto, ejecute  `ng serve` en la carpeta contenedora y navegue a `http://localhost:4200/`
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.9.
+## Esctructura. 
 
-## Development server
+Proyecto desarrollado con Angular 12. 
+ en la ruta `/src/app/components` se encuentran los componentes necesarios para el funcionamiento de la aplicación.
+ Para cada componente se genera un arhivo .ts que incluye la funcionanilidad, un archivo .html con la maquetación y un .css como hoja de estilos independiente.
+ 1-Barra: Es la barra de busqueda, componente que se incluye en los demas para que siempre este visible. 
+ 2-detalle: Componente que contiene la vista detallada de un producto.
+ 3-item: contiene la información de cada item que se usara para mostrar el listado de los resultados de la busqueda.
+ 4-list: Contiene la vista de el listado de elementos buscados. 
+ 5-main: vista inicial, donde solo se incluye la barra de busqueda.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+En la ruta `/src/app/services` se encuentra creado el servicio "api.service" el cual nos brinda las funciones necesarias para obtener los datos de la API proporcionada por mercalibre, este servicio es consumido en los componentes anteriormente mencionados. 
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+En el archivo `/src/app/app-routing.module.ts` se encuentra la programación de las rutas de la aplicación, para que podamos acceder a cada una de las vistas de manera individual. 

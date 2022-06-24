@@ -2,7 +2,12 @@
 <div class="cuerpo" >
     <div class="lista" >
         <div *ngFor="let item of results" >
-          <a href="/items/{{item.id}}"> <app-item  [item]="item"  ></app-item> </a> 
+          <a href="/items/{{item.id}}"> 
+            <!-- hacemos uso del componente item, para que crear la lista de resultados sea por medio de un ngFor   -->
+            <app-item  [item]="item"  >
+
+          </app-item>
+         </a> 
             <hr style=" background-color: #999999; " >
         </div>
        

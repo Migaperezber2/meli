@@ -15,23 +15,26 @@ description;
     ) { }
 
   ngOnInit(): void {
+
     this.id=this.route.snapshot.paramMap.get("id");
     this.getDetails();
   }
 
 getDetails(){
+  //funcion para obtener los detalles de un producto por medio del api service
   this.apiService.item(this.id)
   .then((r)=>{
-  //console.log(r)
+ 
     this.details=r;
     this.details.price=this.details.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     this.getDescription();
   })
 }
 getDescription(){
+    //funcion para obtener la descripcion de un producto por medio del api service
   this.apiService.itemDescription(this.id)
   .then((r)=>{
-   // console.log(r)
+
     this.description=r;
   })
 }
