@@ -13,7 +13,9 @@ export class ApiService {
     return this.http.get("https://api.mercadolibre.com/sites/MLA/search?q=:"+search).toPromise()
   }
   public item(id:String){
-    return this.http.get("https://api.mercadolibre.com/items/:"+id).toPromise()
+    return this.http.get("https://api.mercadolibre.com/items/"+id).toPromise()
   }
-
+  public itemDescription(id:String){
+    return this.http.get("https://api.mercadolibre.com/items/"+id+"/description").toPromise()
+  }
 }

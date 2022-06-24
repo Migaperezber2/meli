@@ -1,1 +1,30 @@
-<p>detalle works!</p>
+<app-barra></app-barra>
+<div class="cuerpo" >
+    <div class="lista" *ngIf="details"  >
+        <div class="img-contain" >
+            <img src="{{details.pictures[0].url}}" class="img" width="100%" alt="">
+        </div>
+        <div class="details"  >
+            <p *ngIf="details.condition=='new'" class="condition">Nuevo - {{details.sold_quantity}} vendidos<br></p> 
+            <p *ngIf="details.condition!='new'" class="condition">Usado - {{details.sold_quantity}} vendidos<br> </p>
+            
+            <p class="name" >{{details.title}}</p> 
+            
+            <p class="price">$ {{details.price}}</p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+        <br><br>
+        <div   *ngIf="description" style="margin-left: 32px; width:680px" >
+            <h1 class="title" >Descripción del producto</h1>
+            
+            <span class="text" >{{description.plain_text}}</span>
+            <div style="height: 32px;" >
+
+            </div>
+        </div>
+       
+    </div>
+    <br>
+    <br>
+
+</div>

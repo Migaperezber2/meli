@@ -10,6 +10,7 @@ export class ItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.item.price=this.item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
   }
 
 }

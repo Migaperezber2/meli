@@ -8,7 +8,7 @@ import { ApiService } from "../../services/api.service";
 })
 export class ListComponent implements OnInit {
   search: string="";
-  results:Object[]=[];
+  results:any[]=[];
   constructor(private route: ActivatedRoute,
     private apiService:ApiService,
     private elRef:ElementRef
@@ -28,7 +28,7 @@ export class ListComponent implements OnInit {
     this.elRef.nativeElement.querySelector('#searchvalue').value=search;
     this.apiService.search(search)
     .then((r:any)=>{
-      console.log(r)
+    //  console.log(r)
      if(r["results"]){
       this.results=r["results"];
       if(this.results.length>4){

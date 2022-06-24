@@ -2,7 +2,7 @@
 <div class="cuerpo" >
     <div class="lista" >
         <div *ngFor="let item of results" >
-            <app-item  [item]="item"  ></app-item> 
+          <a href="/items/{{item.id}}"> <app-item  [item]="item"  ></app-item> </a> 
             <hr style=" background-color: #999999; " >
         </div>
        
